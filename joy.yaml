@@ -1,0 +1,27 @@
+$onesync: on
+name: Joy Framework
+version: 1.0.0
+author: Benjamin4k
+description: Basic server using Joy Framework
+
+tasks:
+  - action: download_github
+    src: https://github.com/joy-indonesia/txAdminRecipe
+    ref: main
+    dest: ./tmp/joy
+
+  - action: move_path
+    src: ./tmp/joy/server.cfg
+    dest: ./server.cfg
+
+  - action: move_path
+    src: ./tmp/joy/configs
+    dest: ./
+
+  - action: download_github
+    src: https://github.com/citizenfx/cfx-server-data
+    subpath: resources
+    dest: ./resources/
+
+  - action: remove_path
+    path: ./tmp
