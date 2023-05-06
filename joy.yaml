@@ -15,8 +15,8 @@ tasks:
     dest: ./server.cfg
 
   - action: move_path
-    src: ./tmp/joy/configs
-    dest: ./
+    src: ./tmp/joy/configs/
+    dest: ./configs
 
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
